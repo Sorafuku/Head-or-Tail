@@ -32,9 +32,9 @@ func main(){
 	fmt.Println("Heads: ",headcnt," Tails: ",tailcnt)
 
 	if(headcnt>tailcnt) {
-		fmt.Println(name,"won!")
+		fmt.Println("You won!")
 	} else {
-		fmt.Println(name,"lost!")
+		fmt.Println("You lost!")
 	}
 	
 }
