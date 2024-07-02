@@ -8,11 +8,18 @@ import	(
 func main(){
 	headcnt := 0
 	tailcnt := 0
-	fmt.Println("Tossing a coin...")
+	var name string
 	headorTails := []string{
 		"Heads",
 		"Tails",
 	}
+
+	fmt.Println("Who are you?")
+	fmt.Scan(&name)
+	fmt.Println("Hello, "+name+"!")
+
+
+	fmt.Println("Tossing a coin...")
 	for i:=0;i<3;i++ {
 		if(rand.Intn(2)==0){
 			fmt.Println("Round ",i+1,": ", headorTails[0])
@@ -23,6 +30,12 @@ func main(){
 		}
 	}
 	fmt.Println("Heads: ",headcnt," Tails: ",tailcnt)
+
+	if(headcnt>tailcnt) {
+		fmt.Println(name,"won!")
+	} else {
+		fmt.Println(name,"lost!")
+	}
 	
 }
 
